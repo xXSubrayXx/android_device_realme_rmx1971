@@ -18,13 +18,17 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
-
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-reloaded 
+	
 # Properties
 -include $(LOCAL_PATH)/vendor_props.mk
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
+
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -376,10 +380,6 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_RMX1971
-
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -389,6 +389,10 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0-service \
     android.hardware.secure_element@1.0 \
     android.hardware.secure_element@1.0-impl
+
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_RMX1971
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -428,7 +432,11 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
     thermal.sdm710
-	
+
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
