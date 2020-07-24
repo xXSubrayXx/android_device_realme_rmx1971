@@ -335,6 +335,11 @@ PRODUCT_BOOT_JARS += \
 # HIDL
 PRODUCT_PACKAGES += \
 
+#HAls
+PRODUCT_SOONG_NAMESPACES += hardware/qcom/display
+PRODUCT_SOONG_NAMESPACES += hardware/qcom/audio
+PRODUCT_SOONG_NAMESPACES += hardware/qcom/media
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti
