@@ -439,9 +439,8 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service \
     android.hardware.vibrator@1.0-impl
 
-# VNDK-SP
-PRODUCT_PACKAGES += \
-    vndk-sp
+# Vendor SPL
+VENDOR_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 
 # WiFi
 PRODUCT_PACKAGES += \
