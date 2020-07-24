@@ -30,6 +30,10 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage/lineage-sdk
 
+# perf
+$(call inherit-product-if-exists, vendor/qcom/common/perf/perf-vendor.mk)
+TARGET_COMMON_QTI_COMPONENTS := perf
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -327,6 +331,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     QPerformance \
     UxPerformance
+
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0_system \
+    android.hidl.manager@1.0 \
+    android.hidl.manager@1.0_system \
+    android.hidl.manager@1.0-java
 
 # Power
 PRODUCT_PACKAGES += \
