@@ -336,9 +336,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
 
 #HAls
-PRODUCT_SOONG_NAMESPACES += hardware/qcom/display
-PRODUCT_SOONG_NAMESPACES += hardware/qcom/audio
-PRODUCT_SOONG_NAMESPACES += hardware/qcom/media
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/sdm845/display
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/sdm845/audio
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/sdm845/media
 
 # Power
 PRODUCT_PACKAGES += \
