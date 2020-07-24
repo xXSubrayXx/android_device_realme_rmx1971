@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Inherit some common Reloaded stuff.
-$(call inherit-product, vendor/fluid/config/common.mk)
+$(call inherit-product, vendor/reloaded/config/common.mk)
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
