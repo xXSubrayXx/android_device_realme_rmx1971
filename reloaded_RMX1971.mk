@@ -22,10 +22,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Inherit some common Reloaded stuff.
-$(call inherit-product, vendor/reloaded/config/common.mk)
-
-# Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
+RELOADED_BUILDTYPE := UNOFFICIAL
+TARGET_INCLUDE_WIFI_EXT := true
+$(call inherit-product, vendor/reloaded/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX1971
@@ -37,7 +37,7 @@ PRODUCT_MANUFACTURER := Realme
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="sdm710-user 9 PKQ1.190101.001 eng.root.20190823.002138 release-keys"
+    PRIVATE_BUILD_DESC="google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys"
