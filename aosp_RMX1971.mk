@@ -21,25 +21,29 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from RMX1971 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common fluid stuff.
-$(call inherit-product, vendor/fluid/config/common_full_phone.mk)
+# Inherit some common ROM stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# flags for fluid gapps variant
-TARGET_INCLUDE_GAPPS := true
+# flags for ROM gapps variant
 TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+IS_PHONE:= true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX1971
-PRODUCT_NAME := fluid_RMX1971
+PRODUCT_NAME := aosp_RMX1971
 PRODUCT_BRAND := Realme
 PRODUCT_MODEL := Realme 5 Pro
 PRODUCT_MANUFACTURER := Realme
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
+
+# PixelPlusUI Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+      ro.pixelplusui.maintainer=Subray
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys"

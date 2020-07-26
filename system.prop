@@ -102,7 +102,3 @@ persist.hwc.enable_vds=1
 
 # Zygote preforking
 persist.device_config.runtime_native.usap_pool_enabled=true
-
-# processor model
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.processor.model = SD712
