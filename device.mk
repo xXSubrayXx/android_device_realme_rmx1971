@@ -18,20 +18,10 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-	
+    $(LOCAL_PATH)/overlay
+
 # Properties
 -include $(LOCAL_PATH)/vendor_props.mk
-
-#PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
-
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
-
-# perf
-$(call inherit-product-if-exists, vendor/qcom/common/perf/perf-vendor.mk)
-TARGET_COMMON_QTI_COMPONENTS := perf
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -156,7 +146,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     libxml2 \
-    CameraGo
+    Snap
 
 # CNE
 PRODUCT_PACKAGES += \
@@ -253,6 +243,7 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service \
     android.hardware.health@2.0-service
 
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -331,17 +322,9 @@ PRODUCT_BOOT_JARS += \
     QPerformance \
     UxPerformance
 
-# HIDL
-PRODUCT_PACKAGES += \
-
-#HAls
-PRODUCT_SOONG_NAMESPACES += hardware/qcom/display
-PRODUCT_SOONG_NAMESPACES += hardware/qcom/audio
-PRODUCT_SOONG_NAMESPACES += hardware/qcom/media
-
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti
+    android.hardware.power@1.3-service.pixel-libperfmgr
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -415,6 +398,7 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
+
 # Telephony
 PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
@@ -433,10 +417,6 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-service \
     thermal.sdm710
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
@@ -446,12 +426,9 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service \
     android.hardware.vibrator@1.0-impl
 
-# VNDK
+# VNDK-SP
 PRODUCT_PACKAGES += \
     vndk-sp
-
-# Vendor SPL
-VENDOR_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 
 # WiFi
 PRODUCT_PACKAGES += \
@@ -481,3 +458,8 @@ PRODUCT_BOOT_JARS += \
 # Inherit from proprietary version
 $(call inherit-product-if-exists, vendor/realme/RMX1971/RMX1971-vendor.mk)
 
+# inherit from qcom common blobs
+#-include vendor/qcom/common/av/qti-av.mk
+-include vendor/qcom/common/bt/qti-bt.mk
+-include vendor/qcom/common/perf/qti-perf.mk
+-include vendor/qcom/common/telephony/qti-telephony.mk
