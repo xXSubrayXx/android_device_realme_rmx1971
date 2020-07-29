@@ -203,6 +203,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libhwc2on1adapter \
     libhwc2onfbadapter \
+    libqdMetaData.system \
     libtinyxml \
     libvulkan \
     memtrack.sdm710 \
