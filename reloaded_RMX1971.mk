@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit some common Reloaded stuff.
 $(call inherit-product, vendor/reloaded/common.mk)
 
-# Inherit from RMX1901 device.
+# Inherit from RMX1971 device.
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Bootanimation
