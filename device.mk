@@ -82,7 +82,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-service \
     android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.soundtrigger@2.1-impl \
+    android.hardware.soundtrigger@2.2-impl \
     android.hardware.audio.effect@4.0-impl \
     audio.primary.sdm710 \
     audio.a2dp.default \
@@ -154,6 +154,11 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne \
     services-ext
 
+# Codec2 modules
+PRODUCT_PACKAGES += \
+    com.android.media.swcodec \
+    libsfplugin_ccodec
+
 # Device init scripts
 PRODUCT_PACKAGES += \
     init.class_late.sh \
@@ -210,6 +215,10 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.7 \
     vendor.qti.hardware.display.allocator@1.0-service \
     libgui_vendor
+
+# Dexpreopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -293,12 +302,11 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
-
-PRODUCT_PACKAGES += \
-    libstagefright_omx.vendor \
-    android.hardware.media.omx@1.0-service
-
+    
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
@@ -332,6 +340,9 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3-service.pixel-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -401,6 +412,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
+    $(LOCAL_PATH)/seccomp/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy 
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
