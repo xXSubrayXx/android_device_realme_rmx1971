@@ -5,7 +5,6 @@ allow hal_audio_default bluetooth_prop:file { read };
 get_prop(hal_audio_default, vendor_mpctl_prop);
 get_prop(hal_audio_default, oppo_debug_prop);
 
-set_prop(hal_audio_default, vendor_audio_prop)
 allow hal_audio_default sysfs:dir read;
 hal_client_domain(hal_audio_default, hal_power);
 userdebug_or_eng(`
