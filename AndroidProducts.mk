@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The ReloadedOS Project
+# Copyright (C) 2020 The CygnusOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/reloaded_RMX1971.mk
+    $(LOCAL_DIR)/cygnus_RMX1971.mk
 
 COMMON_LUNCH_CHOICES := \
-    reloaded_RMX1971-user \
-    reloaded_RMX1971-userdebug \
-    reloaded_RMX1971-eng
+    cygnus_RMX1971-user \
+    cygnus_RMX1971-userdebug \
+    cygnus_RMX1971-eng
