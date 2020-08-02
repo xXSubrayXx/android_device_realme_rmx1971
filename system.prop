@@ -1,14 +1,12 @@
 # Bluetooth
 ro.bluetooth.wipower=false
 ro.bluetooth.emb_wp_mode=false
-persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac
 
 # Camera
 ro.camera.hfr.enable=1
 ro.camera.relight.enable=0
 ro.camera.attr.detect.enable=1
-ro.camera.notify_nfc=1
-ro.camera.frontonly.motor=1
 camera.disable_zsl_mode=true
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
@@ -18,19 +16,9 @@ persist.vendor.dpm.feature=1
 persist.vendor.dpm.nsrm.bkg.evt=3955
 
 # Data modules
-persist.data.df.agg.dl_pkt=10
-persist.data.df.agg.dl_size=4096
 persist.data.df.dev_name=rmnet_usb0
-persist.data.df.dl_mode=5
-persist.data.df.iwlan_mux=9
-persist.data.df.mux_count=8
-persist.data.df.ul_mode=5
-persist.data.mode=concurrent
-persist.data.netmgrd.qos.enable=true
-persist.data.profile_update=true
-persist.data.wda.enable=true
-persist.rmnet.data.enable=true
-ro.use_data_netmgrd=true
+persist.vendor.data.mode=concurrent
+ro.vendor.use_data_netmgrd=true
 
 # Graphics
 debug.sf.enable_hwc_vds=1
@@ -40,75 +28,64 @@ persist.demo.hdmirotationlock=false
 sdm.debug.disable_dest_scalar=1
 sdm.debug.disable_inline_rotator=1
 sdm.debug.disable_inline_rotator_secure=1
-sdm.debug.prefersplit=1
+sdm.debug.prefersplit=1 
 
-# LMKD
-ro.config.low_ram=false
-ro.lmk.kill_heaviest_task=true
-ro.lmk.kill_timeout_ms=100
-ro.lmk.use_minfree_levels=true
-ro.lmk.log_stats=true
+# IMS
+persist.vendor.ims.disableUserAgent=0
 
 # Media
-media.aac_51_output_enabled=true
-media.stagefright.enable-aac=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-http=true
-media.stagefright.enable-player=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-scan=true
-persist.mm.enable.prefetch=true
-
-#prefer HW codec over SW for thumbnail
-media.stagefright.thumbnail.prefer_hw_codecs=true
+audio.offload.video=true
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Netflix custom property
-ro.netflix.bsp_rev=Q670-14477-1	
+ro.netflix.bsp_rev=Q670-14477
+
+# NFC
+ro.hardware.nfc_nci=nqx.default
+ro.nfc.port=I2C
 
 # Perf
 iop.enable_prefetch_ofr=1
 iop.enable_uxe=0
-ro.vendor.qti.core_ctl_min_cpu=4
-ro.vendor.qti.core_ctl_max_cpu=6
+ro.vendor.qti.core_ctl_min_cpu=2
+ro.vendor.qti.core_ctl_max_cpu=4
 
-# RCS and IMS
-persist.data.iwlan.enable=true
-persist.rcs.supported=1
-persist.vendor.ims.disableUserAgent=0
-persist.dbg.ims_volte_enable=1
+# RCS
+persist.rcs.supported=0
 
 # RIL
 DEVICE_PROVISIONED=1
-persist.radio.atfwd.start=true
-persist.radio.flexmap_type=none
+persist.radio.multisim.config=dsds
+persist.sys.fflag.override.settings_network_and_internet_v2=true
+persist.vendor.radio.apm_sim_not_pwdn=1
+persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.flexmap_type=none
 persist.vendor.radio.force_on_dc=true
-persist.vendor.radio.redir_party_num=1
-persist.vendor.radio.lte_vrte_ltd=1
-persist.vendor.radio.cs_srv_type=1
+persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
+persist.vendor.radio.redir_party_num=1
+persist.vendor.radio.report_codec=1
+persist.vendor.radio.sib16_support=1
 ril.subscription.types=NV,RUIM
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+ro.com.android.dataroaming=true
 ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
-rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
-persist.sys.fflag.override.settings_network_and_internet_v2=true
-persist.radio.VT_ENABLE=1 
-persist.radio.volte.dan_support=true 
-persist.data.iwlan=1 
-persist.data.iwlan.ipsec.ap=1 
-persist.sys.cust.lte_config=true 
-service.qti.ims.enabled=1 
-persist.vendor.qti.telephony.vt_cam_interface=2
-ro.telephony.iwlan_operation_mode=legacy
 
 # SSR
 persist.vendor.ssr.enable_ramdumps=0
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
-# WFD
-persist.hwc.enable_vds=1
+# Sensors
+persist.sys.oppo.fusionlight=true
+persist.sys.oppo.proximity=true
+
+# Thermal
+persist.sys.enable.oscar=0
+persist.sys.oscar.dc=1
 
 # Zygote preforking
 persist.device_config.runtime_native.usap_pool_enabled=true
