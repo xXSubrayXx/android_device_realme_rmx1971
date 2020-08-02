@@ -43,10 +43,6 @@ ro.vendor.qti.sys.fw.bservice_enable=true
 # Netflix custom property
 ro.netflix.bsp_rev=Q670-14477
 
-# NFC
-ro.hardware.nfc_nci=nqx.default
-ro.nfc.port=I2C
-
 # Perf
 iop.enable_prefetch_ofr=1
 iop.enable_uxe=0
@@ -78,10 +74,6 @@ telephony.lteOnCdmaDevice=1
 # SSR
 persist.vendor.ssr.enable_ramdumps=0
 persist.vendor.ssr.restart_level=ALL_ENABLE
-
-# Sensors
-persist.sys.oppo.fusionlight=true
-persist.sys.oppo.proximity=true
 
 # Thermal
 persist.sys.enable.oscar=0
