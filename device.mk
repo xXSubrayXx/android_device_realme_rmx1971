@@ -139,16 +139,13 @@ PRODUCT_PACKAGES += \
     BluetoothResCommon \
     libldacBT_dec
 
-# Camera
+ Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0 \
-    android.hardware.camera.device@3.4 \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.5 \
     android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.common@1.0 \
-    vendor.qti.hardware.camera.device@1.0 \
-    Snap
+    Snap \
+    libdng_sdk.vendor \
+    vendor.qti.hardware.camera.device@1.0.vendor
 
 # CNE
 PRODUCT_PACKAGES += \
