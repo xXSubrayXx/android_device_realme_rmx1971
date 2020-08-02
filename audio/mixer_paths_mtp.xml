@@ -296,18 +296,18 @@
     <ctl name="EAR PA Gain" value="POS_1P5_DB" />
     <ctl name="EAR PA Boost" value="ENABLE" />
 
-    <ctl name="RX1 Digital Volume" value="84" />
-    <ctl name="RX2 Digital Volume" value="84" />
-    <ctl name="RX3 Digital Volume" value="84" />
-    <ctl name="RX4 Digital Volume" value="84" />
-    <ctl name="RX5 Digital Volume" value="84" />
+    <ctl name="RX1 Digital Volume" value="90" />
+    <ctl name="RX2 Digital Volume" value="90" />
+    <ctl name="RX3 Digital Volume" value="90" />
+    <ctl name="RX4 Digital Volume" value="90" />
+    <ctl name="RX5 Digital Volume" value="90" />
     <ctl name="ADC1 Volume" value="4" />
     <ctl name="ADC2 Volume" value="4" />
     <ctl name="ADC3 Volume" value="4" />
-    <ctl name="DEC1 Volume" value="84" />
-    <ctl name="DEC2 Volume" value="84" />
-    <ctl name="DEC3 Volume" value="84" />
-    <ctl name="DEC4 Volume" value="84" />
+    <ctl name="DEC1 Volume" value="90" />
+    <ctl name="DEC2 Volume" value="90" />
+    <ctl name="DEC3 Volume" value="90" />
+    <ctl name="DEC4 Volume" value="90" />
 
     <!-- Compander controls -->
     <ctl name="COMP1 Switch" value="1" />
@@ -339,27 +339,27 @@
     <ctl name="COMP0 RX2" value="0" />
 
     <!-- IIR/voice anc -->
-    <ctl name="IIR1 Band1" id ="0" value="268435456" />
+    <ctl name="IIR1 Band1" id ="0" value="269035456" />
     <ctl name="IIR1 Band1" id ="1" value="0" />
     <ctl name="IIR1 Band1" id ="2" value="0" />
     <ctl name="IIR1 Band1" id ="3" value="0" />
     <ctl name="IIR1 Band1" id ="4" value="0" />
-    <ctl name="IIR1 Band2" id ="0" value="268435456" />
+    <ctl name="IIR1 Band2" id ="0" value="269035456" />
     <ctl name="IIR1 Band2" id ="1" value="0" />
     <ctl name="IIR1 Band2" id ="2" value="0" />
     <ctl name="IIR1 Band2" id ="3" value="0" />
     <ctl name="IIR1 Band2" id ="4" value="0" />
-    <ctl name="IIR1 Band3" id ="0" value="268435456" />
+    <ctl name="IIR1 Band3" id ="0" value="269035456" />
     <ctl name="IIR1 Band3" id ="1" value="0" />
     <ctl name="IIR1 Band3" id ="2" value="0" />
     <ctl name="IIR1 Band3" id ="3" value="0" />
     <ctl name="IIR1 Band3" id ="4" value="0" />
-    <ctl name="IIR1 Band4" id ="0" value="268435456" />
+    <ctl name="IIR1 Band4" id ="0" value="269035456" />
     <ctl name="IIR1 Band4" id ="1" value="0" />
     <ctl name="IIR1 Band4" id ="2" value="0" />
     <ctl name="IIR1 Band4" id ="3" value="0" />
     <ctl name="IIR1 Band4" id ="4" value="0" />
-    <ctl name="IIR1 Band5" id ="0" value="268435456" />
+    <ctl name="IIR1 Band5" id ="0" value="269035456" />
     <ctl name="IIR1 Band5" id ="1" value="0" />
     <ctl name="IIR1 Band5" id ="2" value="0" />
     <ctl name="IIR1 Band5" id ="3" value="0" />

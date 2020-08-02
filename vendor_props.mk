@@ -106,15 +106,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
    ro.camera.attr.detect.enable=1 \
    ro.camera.temperature.limit=470 
 
-# Dalvik
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapgrowthlimit=384m \
-    dalvik.vm.heapstartsize=16m \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapminfree=4m \
-    dalvik.vm.heapmaxfree=16m
-
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.ad.sdr_calib_data=/vendor/etc/OPPO_OLED_AD_calib.cfg \
