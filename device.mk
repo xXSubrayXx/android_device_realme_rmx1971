@@ -141,7 +141,13 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libdng_sdk.vendor \
+    android.frameworks.displayservice@1.0 \
+    android.hardware.camera.device@3.4 \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.5 \
+    android.hardware.camera.provider@2.4-service \
+    android.hardware.camera.common@1.0 \
+    vendor.qti.hardware.camera.device@1.0 \
     Snap
 
 # CNE
