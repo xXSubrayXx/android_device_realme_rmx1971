@@ -153,11 +153,6 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap
 
-# Codec2 modules
-PRODUCT_PACKAGES += \
-    com.android.media.swcodec \
-    libsfplugin_ccodec
-
 # Device init scripts
 PRODUCT_PACKAGES += \
     init.class_late.sh \
@@ -388,10 +383,9 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-   android.hardware.sensors@1.0-service \
-   android.hardware.sensors@1.0-impl.realme_sdm710 \
-   libsensorndkbridge
-
+    android.hardware.sensors@1.0-impl.realme_sdm710 \
+    android.hardware.sensors@1.0-service 
+   
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
 
