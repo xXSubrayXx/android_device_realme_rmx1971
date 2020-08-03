@@ -18,6 +18,7 @@ $(call inherit-product, vendor/cygnus/configs/common.mk)
 $(call inherit-product, device/qcom/common/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_GAPPS_ARCH := arm64
 
 # Inherit from RMX1971 device.
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
