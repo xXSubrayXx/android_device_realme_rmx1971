@@ -162,6 +162,8 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 TARGET_HAS_NO_WLAN_STATS := true
 TARGET_HAS_NO_POWER_STATS := true
+TARGET_USES_NON_LEGACY_POWERHAL := true
+
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
@@ -193,8 +195,8 @@ BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_raphael
-TARGET_RECOVERY_DEVICE_MODULES := libinit_raphael
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_pixel
+TARGET_RECOVERY_DEVICE_MODULES := libinit_pixel
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

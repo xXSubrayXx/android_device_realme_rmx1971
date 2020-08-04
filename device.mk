@@ -78,18 +78,16 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@5.0-impl \
+    android.hardware.audio@4.0-impl \
     android.hardware.audio@2.0-service \
+    android.hardware.audio.effect@2.0-service \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.soundtrigger@2.1-impl \
-    android.hardware.audio.effect@5.0-impl \
-    audio.primary.sdm710 \
+    android.hardware.audio.effect@4.0-impl \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
-    libaudio-resampler \
-    libaudioroute \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -137,7 +135,8 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     BluetoothResCommon \
-    libldacBT_dec
+    libldacBT_dec \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor
     
 # CNE
 PRODUCT_PACKAGES += \
@@ -242,6 +241,13 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service \
     android.hardware.health@2.0-service
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0_system \
+    android.hidl.manager@1.0 \
+    android.hidl.manager@1.0_system
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -297,19 +303,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
-# OMX
+# Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
-    libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
+    libOmxG711Enc \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libOmxG711Enc \
-    libplatformconfig \
     libstagefrighthw
 
 # Perf
@@ -319,7 +323,6 @@ PRODUCT_BOOT_JARS += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti \
     android.hardware.power@1.2-impl \
     android.hardware.power@1.2-service
 
@@ -383,8 +386,9 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl.realme_sdm710 \
-    android.hardware.sensors@1.0-service 
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service \
+    libsensorndkbridge
    
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
@@ -415,6 +419,9 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
     thermal.sdm710
+
+# Treble
+PRODUCT_USE_VNDK_OVERRIDE := true
 
 # USB
 PRODUCT_PACKAGES += \
