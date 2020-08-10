@@ -16,6 +16,15 @@
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+# Inherit from proprietary version
+$(call inherit-product-if-exists, vendor/realme/RMX1971/RMX1971-vendor.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -316,6 +325,10 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Media-extra
+PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-impl
+
 # Perf
 PRODUCT_BOOT_JARS += \
     QPerformance \
@@ -456,6 +469,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# Inherit from proprietary version
-$(call inherit-product-if-exists, vendor/realme/RMX1971/RMX1971-vendor.mk)
