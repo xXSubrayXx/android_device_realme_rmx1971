@@ -79,8 +79,8 @@ void load_dalvikvm_properties()
 void vendor_load_properties()
 {
     // fingerprint
-    property_override("ro.build.description", "sdm710-user 9 PKQ1.190101.001 eng.root.20200216.162258 release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys");
+    property_override("ro.build.description", "coral-user 10 QQ3A.200805.001 6578210 release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ3A.200805.001/6578210:user/release-keys");
 
     load_dalvikvm_properties();
 }
