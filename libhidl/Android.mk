@@ -13,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 include $(CLEAR_VARS)
 LOCAL_SHARED_LIBRARIES := libhidltransport
 LOCAL_MODULE := android.hidl.base@1.0_system
