@@ -10,9 +10,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
-
 # Inherit some common Cygnus stuff.
 $(call inherit-product, vendor/cygnus/configs/common.mk)
 $(call inherit-product, device/qcom/common/common.mk)
@@ -29,9 +26,9 @@ PRODUCT_DEVICE := RMX1971
 PRODUCT_NAME := cygnus_RMX1971
 PRODUCT_BRAND := Realme
 PRODUCT_MODEL := Realme 5 Pro
-PRODUCT_MANUFACTURER := Realme
+PRODUCT_MANUFACTURER := realme
 
-PRODUCT_GMS_CLIENTID_BASE := android-realme
+PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="RMX1971" \

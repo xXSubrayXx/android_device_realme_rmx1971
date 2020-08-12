@@ -19,6 +19,12 @@ TARGET_SCREEN_WIDTH := 1080
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
+# Inherit from proprietary version
+$(call inherit-product-if-exists, vendor/realme/RMX1971/RMX1971-vendor.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -460,6 +466,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# Inherit from proprietary version
-$(call inherit-product-if-exists, vendor/realme/RMX1971/RMX1971-vendor.mk)
