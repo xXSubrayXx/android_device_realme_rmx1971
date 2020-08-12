@@ -78,14 +78,11 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@4.0-impl \
+    android.hardware.audio@5.0-impl \
     android.hardware.audio@2.0-service \
-    android.hardware.audio.effect@2.0-service \
-    android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.soundtrigger@2.1-impl \
-    android.hardware.audio.effect@4.0-impl \
+    android.hardware.soundtrigger@2.2-impl \
+    android.hardware.audio.effect@5.0-impl \
     audio.a2dp.default \
-    audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
     libqcompostprocbundle \
@@ -419,9 +416,6 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
     thermal.sdm710
-
-# Treble
-PRODUCT_USE_VNDK_OVERRIDE := true
 
 # USB
 PRODUCT_PACKAGES += \
